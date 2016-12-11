@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   root to: 'articles#index'
 
   # Tells Rails that we were going to follow the RESTful conventions for this model named Article.
-  resources :articles
-
+  resources :articles do
+    resources :comments
+  end
 
 end
